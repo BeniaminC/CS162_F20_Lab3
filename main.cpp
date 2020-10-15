@@ -23,21 +23,23 @@ int main() {
     Plot plot1;
     plot1.printPoints();
 
-    plot1.add_point(one_point);
+    plot1.add_point(one_point); // add one point
     plot1.printPoints();
 
-    plot1.add_points(array_of_points, 3);
+    plot1.add_points(array_of_points, 3); // add three points
     plot1.printPoints();
 
     //copy constructor
-    Plot plot2 = plot1;
+    Plot plot2 = plot1; // copy constructor invoked during initialization
     plot2.printPoints();
 
     //operation overloading (=)
-    Plot plot3;
-    plot3 = plot1;
-    plot3.printPoints();
+    Plot plot3; // first create the plot
+    plot3 = plot1; // now use the operation to invoke the operation overload
+    plot3.printPoints(); 
 
+    // free the example array of points
+    delete[] array_of_points;
 
     return 0;
 }

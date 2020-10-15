@@ -104,7 +104,7 @@ void Plot::add_point(const Point& point) {
 }
 
 void Plot::add_points(Point* const &points, int n) {
-    // create a new table n+1
+    // create a new table current_size + other_size
     Point* array = new Point[this->size + n];
 
     // copy the orginal table
