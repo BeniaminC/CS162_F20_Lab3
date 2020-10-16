@@ -41,5 +41,57 @@ int main() {
     // free the example array of points
     delete[] array_of_points;
 
+    // Below are some brain teasers to understand how pointers and dynamic allocation works.
+
+    // EXAMPLE 1
+    Point* example1 = new Point[5]; // what is this line exactly doing?
+
+    // EXAMPLE 2
+    Point** example2 = new Point*[5];
+    for (int i = 0; i < 5; i++) {
+        example2[i] = new Point[5];
+    }
+
+    // EXAMPLE 3
+    Point** example3 = new Point*[5];
+    for (int i = 0; i < 5; i++) {
+        example3[i] = new Point(5,2); // Why is this method more powerful?
+    }
+
+    // EXAMPLE 4
+    Point*** example4 = new Point**[5];
+    for (int i = 0; i < 5; i++) {
+        example4[i] = new Point*[5];
+        for (int j = 0; j < 5; j++) {
+            example4[i][j] = new Point(i,j); // What is this
+        }
+    }
+
+    // How do we free each example?
+    // 1
+    delete[] example1;
+    
+    // 2
+    for (int i = 0; i < 5; i++) {
+        delete[] example2[i];
+    }
+    delete[] example2;
+
+    // 3
+    for (int i = 0; i < 5; i++) {
+        delete example3[i];
+    }
+    delete[] example3;
+
+    // 4
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            delete example4[i][j];
+        }
+        delete[] example4[i];
+    }
+    delete[] example4;
+
     return 0;
 }
+ 
