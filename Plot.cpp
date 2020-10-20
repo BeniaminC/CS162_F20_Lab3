@@ -33,7 +33,7 @@ int Plot::get_size() {
 
 // some notes about copy constructor usage:
 // - when returning an object from a function
-// - when passing an object int oa function by value
+// - when passing an object into a function by value
 // - when using asingment (=) to initialized an object at instantiation
 // eg... Point p2 = p1;
 Plot::Plot(const Plot& other) {
@@ -56,13 +56,12 @@ Plot::Plot(const Plot& other) {
 // operation overloading happens AFTER a class is initialized.
 void Plot::operator=(const Plot& other) {
     
-    // first delete the old array
-    if (this->size > 0) {
-        delete[] this->points;
-    }
-    
     // create a new array of the other size
     if (other.size > 0) {
+        
+        // first delete the old array
+        delete[] this->points;
+
         this->points = new Point[other.size];
         this->size = other.size;
 

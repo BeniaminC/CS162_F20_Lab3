@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "OSU_ENGR_SERVERS",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/bin/g++",
+            "cStandard": "c99",
+            "cppStandard": "c++11",
+            "compilerArgs": [
+                "-std=c++11",
+                "-g"
+            ],
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
