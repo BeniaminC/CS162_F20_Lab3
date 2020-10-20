@@ -20,7 +20,7 @@ class Plot {
        // copy constructor
         Plot(const Plot&);
         // operation overloading
-        void operator=(const Plot& other);
+        void operator=(const Plot&);
 
         void add_point(const Point&); // add a point to our plot
         void add_points(Point* const &, int n); // add a constant pointer by reference

@@ -3,12 +3,15 @@
 
 Plot::Plot() {
     // do nothing
+    this->points = NULL;
     this->size = 0;
 }
 
 Plot::~Plot() {
     // only delete if we have anything on the heap (an array of at least 1 point)
-    if (this->size > 0) {
+
+    // remember, booleans are "true" if it's anything but zero!
+    if (this->size > 0) { // OR "this->points != NULL"
         delete[] points;
     }
 }
@@ -38,7 +41,7 @@ int Plot::get_size() {
 // eg... Point p2 = p1;
 Plot::Plot(const Plot& other) {
     
-    if (other.size > 0) {
+    if (other.size > 0) { // OR "other.points != NULL"
         this->points = new Point[other.size];
         this->size = other.size;
 
@@ -57,7 +60,7 @@ Plot::Plot(const Plot& other) {
 void Plot::operator=(const Plot& other) {
     
     // create a new array of the other size
-    if (other.size > 0) {
+    if (other.size > 0) { // OR "other.points != NULL"
         
         // first delete the old array
         delete[] this->points;
@@ -81,13 +84,14 @@ void Plot::add_point(const Point& point) {
     Point* array = new Point[this->size + 1];
 
     // copy the orginal table
-    if (this->size > 0) {
+    if (this->size > 0) { // OR "this->points != NULL"
         for (int i = 0; i < this->size; i++) {
             array[i].set_x(this->points[i].get_x());
             array[i].set_y(this->points[i].get_y());
         }
            // delete the old table
         delete[] this->points;
+        this->points = NULL;
     }
 
     // add the new point onto the new table
@@ -107,12 +111,12 @@ void Plot::add_points(Point* const &points, int n) {
     Point* array = new Point[this->size + n];
 
     // copy the orginal table
-    if (this->size > 0) {
+    if (this->size > 0) { // OR "this->points != NULL"
         for (int i = 0; i < this->size; i++) {
             array[i].set_x(this->points[i].get_x());
             array[i].set_y(this->points[i].get_y());
         }
-            // delete the old table
+        // delete the old table
         delete[] this->points;
     }
 

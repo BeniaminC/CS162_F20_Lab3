@@ -1,6 +1,6 @@
 CC=g++
 BIN=main
-ARG= -std=c++11 -g
+ARG=-std=c++11 -g
 
 All: $(BIN)
 
