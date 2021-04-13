@@ -1,1 +1,1 @@
-g++ -std=c++11 main.cpp Plot.cpp Point.cpp -o test
+g++ -std=c++11 main.cpp Plot.cpp Point.cpp -o prog
