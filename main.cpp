@@ -14,6 +14,7 @@ int main() {
     //first create some points
     Point one_point(5,2);
 
+
     Point* array_of_points = new Point[3];
     array_of_points[0].set_xy(1,2); 
     array_of_points[1].set_xy(3,4); 
@@ -91,6 +92,7 @@ int main() {
         delete[] example4[i];
     }
     delete[] example4;
+
 
     return 0;
 }
