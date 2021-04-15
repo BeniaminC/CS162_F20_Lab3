@@ -35,6 +35,11 @@ Point::Point(Coord& coord) {
     this->y = coord.y;
 }
 
+// even though we won't be doing anything with the destructor, it's good to define it
+Point::~Point() {
+    // do nothing
+}
+
 // accessors
 int Point::get_x() const {
     return this->x;

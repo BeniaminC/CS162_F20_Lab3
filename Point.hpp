@@ -14,6 +14,9 @@ class Point {
         Point(int,int); // parameterized contructor
         Point(Coord&);
 
+        // destructor
+        ~Point();
+
         // accessors (getters)
         int get_x() const;
         int get_y() const;
