@@ -9,6 +9,7 @@ Key concepts:
 - Accessors (getters)
 - Mutators (setters)
 - Copy Constructors
+- Operation overloading
 - Handling dynamic memory (constructors and destructors)
 - Understanding pointers and array of pointers in-depth
 - Object-Oriented Programming
