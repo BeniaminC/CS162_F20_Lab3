@@ -16,3 +16,6 @@ Key concepts:
 - Memory allocation of classes
 - Similarities to structs
 - Constant parameters and constant references
+
+If you are not comfortable with the above topics, please come to my office hours:
+For Spring 2021, my office hours are Fridays, 11AM-2PM.
