@@ -15,3 +15,4 @@ Key concepts:
 - Object-Oriented Programming
 - Memory allocation of classes
 - Similarities to structs
+- Constant parameters and constant references
