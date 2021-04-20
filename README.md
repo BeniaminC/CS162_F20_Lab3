@@ -18,6 +18,7 @@ Key concepts:
 - Constant parameters and constant references
 - Access modifiers (public, private, and protected)
 - Scope resolution operator (::)
+- the "this" pointer, aka, the self-ness of an object.
 
 If you are not comfortable with the above topics, please come to my office hours:
 For Spring 2021, my office hours are Fridays, 11AM-2PM.
