@@ -5,6 +5,13 @@ Plot::Plot() {
     // do nothing
     this->points = NULL;
     this->size = 0;
+    //this->points = new Point[50];
+}
+
+
+Plot::Plot(int size) {
+    this->points = new Point[size];
+    this->size = size;
 }
 
 Plot::~Plot() {

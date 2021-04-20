@@ -11,6 +11,7 @@ class Plot {
 
     public:
         Plot();
+        Plot(int);
         Plot(Point* const &, int); // input an array of points;
         ~Plot();
 
