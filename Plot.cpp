@@ -46,6 +46,7 @@ int Plot::get_size() {
 // - when passing an object into a function by value
 // - when using asingment (=) to initialized an object at instantiation
 // eg... Point p2 = p1;
+
 Plot::Plot(const Plot& other) {
     
     if (other.size > 0) { // OR "other.points != NULL"
@@ -62,9 +63,8 @@ Plot::Plot(const Plot& other) {
     }
 }
 
-
 // operation overloading happens AFTER a class is initialized.
-void Plot::operator=(const Plot& other) {
+Plot& Plot::operator=(const Plot& other) {
     
     // create a new array of the other size
     if (other.size > 0) { // OR "other.points != NULL"
@@ -81,8 +81,11 @@ void Plot::operator=(const Plot& other) {
         }
     }
     else {
+        delete[] this->points;
+        this->points = NULL;
         this->size = 0;
     }
+    *this;
 }
 
 // this is almost synonymous to how vectors push and pop, but they usually allocate x^n
@@ -96,7 +99,7 @@ void Plot::add_point(const Point& point) {
             array[i].set_x(this->points[i].get_x());
             array[i].set_y(this->points[i].get_y());
         }
-           // delete the old table
+        // delete the old table
         delete[] this->points;
         this->points = NULL;
     }

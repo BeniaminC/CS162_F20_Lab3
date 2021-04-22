@@ -4,7 +4,7 @@
 struct Coord {
     int x;
     int y;
-};
+}; 
 
 
 class Point {
@@ -28,10 +28,11 @@ class Point {
         void set_xy(int,int); // two
         void set_coord(const Coord&); //struct
 
-
+        
     private:
         int x;
         int y;
+
 
 }; // don't forget the semicolon
 

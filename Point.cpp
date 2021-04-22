@@ -44,7 +44,7 @@ Point::~Point() {
 int Point::get_x() const {
     return this->x;
 }
-int Point::get_y() const  {
+int Point::get_y() const {
     return this->y;
 }
 Coord* Point::get_coord() {
