@@ -85,7 +85,7 @@ Plot& Plot::operator=(const Plot& other) {
         this->points = NULL;
         this->size = 0;
     }
-    *this;
+    return *this;
 }
 
 // this is almost synonymous to how vectors push and pop, but they usually allocate x^n
